@@ -1,7 +1,6 @@
 #Nombre: Juan Diego Rojas Valdés (Juan Rojas)
 #Código: 8983626
 #Punto 1)
-mat1=[[11,23,76,34,11],[14,30,92,30,101],[12,45,58,92,22],[74,56,49,56,100],[99,5,28,47,99]]
 def verificarDiagonales(mat):
     length=len(mat)
     diag1=[]
@@ -19,11 +18,8 @@ def verificarDiagonales(mat):
     else:
         flag= False   
     return "1", flag
-print(verificarDiagonales(mat1))
 
 #Punto 2)
-list1=[42,12,90,90,12,42]
-list2=[42,12,90,90,12,45]
 def esCapicua(list):
     length=len(list)
     for i in range(length):
@@ -33,13 +29,9 @@ def esCapicua(list):
         else:
             flag= True
     return "2", flag        
-print(esCapicua(list1))
-print(esCapicua(list2))
 
 #Punto 3)
 #Numeral a)
-list3=[40,10,22,12,33,33,33]
-list4=[41,22,31,15,13,12,33,19]
 def diferenciaListas(list1,list2):
     length1=len(list1)
     length2=len(list2)
@@ -64,7 +56,6 @@ print(diferenciaListas(list3,list4))
 #lectImpres()
 
 #Punto 4
-N=100
 def mostrarPrimos(N):
     print("Números primos del 1 al ",N,":")
     primos=[]
@@ -97,27 +88,8 @@ def mostrarPrimos(N):
         if primosdobles.count(i)==1:
             primosdoblesreales.append(i)
     print("Los números primos cuya suma de sus dígitos también son números primos son los siguientes: ",primosdoblesreales)
-mostrarPrimos(N)
 
 #Punto 5)
-matriz=[[1,0,0,0,0,4,0,5],
-        [0,0,0,0,0,0,4,7],
-        [2,2,0,0,9,0,1,0],
-        [0,0,0,0,0,0,0,0],
-        [0,0,8,1,0,7,0,0],
-        [0,0,0,0,0,0,0,0],
-        [3,0,0,0,0,6,0,2],
-        [4,4,7,0,0,0,0,0],
-        [0,9,0,8,0,7,0,6]]
-disp={0:[(0,1),(5,4),(7,5)],
-      1:[(6,4),(7,7)],
-      2:[(0,2),(1,2),(4,9),(6,1)],
-      4:[(2,8),(3,1),(5,7)],
-      6:[(0,3),(5,6),(7,2)],
-      7:[(0,4),(1,4),(2,7)],
-      8:[(1,9),(3,8),(5,7),(7,6)]}
-par=[(0,0),(8,3),(3,5),(7,2),(4,3),(4,6)]
-
 def sumarValoresMatriz(mat, par):
     matriz=[]
     lista=[]
@@ -139,9 +111,6 @@ def sumarValoresMatriz(mat, par):
                                 lista.append(mat[i][j][1])
                             else:
                                 lista.append(0)
-
-
-                            
         
     print(lista)
     #print(max(lugar))
