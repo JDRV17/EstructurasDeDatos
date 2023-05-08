@@ -121,18 +121,3 @@ int Lista::longLista(){
 bool Lista::vaciaLista(){
    return act == NULL;
 }
-
-    while(tmp->sig != primero){
-      tmp = tmp->sig;
-      cont++;
-    }
-
-    ans = cont;
-  }
-
-  return ans;
-}
-
-bool Lista::vaciaLista(){
-   return act == NULL;
-}
