@@ -10,7 +10,7 @@ class colaPrioridad{
    Lista l;
 
    public:
-      colaPrioridad(); // crearCola
+      colaPrioridad(); 
       Elemento front();
       void deque();
       void enqueue(Elemento);
