@@ -2,7 +2,6 @@
 #include "lista.h"
  
 Nodo::~Nodo(){
-  //cout << "Borrando nodo " << dato << endl;
   sig = NULL;
   ant = NULL;
   delete sig;
@@ -107,6 +106,21 @@ int Lista::longLista(){
     int cont = 1;
     tmp = act;
     primero = act;
+
+    while(tmp->sig != primero){
+      tmp = tmp->sig;
+      cont++;
+    }
+
+    ans = cont;
+  }
+
+  return ans;
+}
+
+bool Lista::vaciaLista(){
+   return act == NULL;
+}
 
     while(tmp->sig != primero){
       tmp = tmp->sig;
