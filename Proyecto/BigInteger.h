@@ -10,12 +10,10 @@ using namespace std;
 class BigInteger
 {
     private:
-        
-
-    public:
         vector<int>number;
         bool sign;
 
+    public:
         BigInteger();
         BigInteger(string& digits);
         BigInteger(const BigInteger& copied);
