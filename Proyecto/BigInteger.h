@@ -10,33 +10,38 @@ using namespace std;
 class BigInteger
 {
     private:
-        vector<int>number;
+        
 
     public:
-        BigInteger(string digits);
-        BigInteger(BigInteger& copied);
+        vector<int>number;
+        bool sign;
+
+        BigInteger();
+        BigInteger(string& digits);
+        BigInteger(const BigInteger& copied);
 
         void add(BigInteger& num);
         void product(BigInteger& num);
         void substract(BigInteger& num);
         void quotient(BigInteger& num);
         void remainder(BigInteger& num);
-        void pow(BigInteger& num);
+        void pow(int& num);
         string toString(BigInteger& num);
 
-        BigInteger operator+(BigInteger num);
-        BigInteger operator-(BigInteger num);
-        BigInteger operator*(BigInteger num);
-        BigInteger operator/(BigInteger num);
-        BigInteger operator%(BigInteger num);
-        bool operator==(BigInteger num);
-        bool operator<(BigInteger num);
-        bool operator>(BigInteger num);
-        bool operator<=(BigInteger num);
-        bool operator>=(BigInteger num);
+        void operator+(BigInteger& num);
+        void operator-(BigInteger& num);
+        void operator*(BigInteger& num);
+        void operator/(BigInteger& num);
+        void operator%(BigInteger& num);
+        bool operator==(BigInteger& num);
+        bool operator<(BigInteger& num);
+        bool operator>(BigInteger& num);
+        bool operator<=(BigInteger& num);
+        bool operator>=(BigInteger& num);
 
-        BigInteger sumarListaValores(list<int> l1);
-        BigInteger multiplicarListaValores(list<int> l1);
+        BigInteger sumarListaValores(list<BigInteger>& l1);
+        BigInteger multiplicarListaValores(list<BigInteger>& l1);
 };
 
 #endif
+
