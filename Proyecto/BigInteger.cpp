@@ -89,22 +89,6 @@ void BigInteger::add(BigInteger& num)
             aux.clear();
         }
     }
-    if(this->sign)
-    {
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    else
-    {
-        cout << "-";
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    cout <<"\n";
 }
 
 void BigInteger::substract(BigInteger& num)
@@ -157,22 +141,6 @@ void BigInteger::substract(BigInteger& num)
             }
         }
     }
-    if(this->sign)
-    {
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    else
-    {
-        cout << "-";
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    cout <<"\n";
 }
 
 void BigInteger::product(BigInteger& num)
@@ -305,23 +273,6 @@ void BigInteger::product(BigInteger& num)
         num.number = aux;
         aux.clear();
     }
-    
-    if(this->sign)
-    {
-        for(i = 0; i < this->number.size(); i++)
-        {
-            //cout << this->number[i];
-        }
-    }
-    else
-    {
-        //cout << "-";
-        for(i = 0; i < this->number.size(); i++)
-        {
-            //cout << this->number[i];
-        }
-    }
-    //cout <<"\n";
 }
 
 void BigInteger::quotient(BigInteger& num)
@@ -365,30 +316,10 @@ void BigInteger::quotient(BigInteger& num)
                 div2 = num;
                 charind1 = i + 48;
                 index = charind1;
-                for(j = 0; j < div1.number.size(); j++)
-                {
-                    cout <<div1.number[j];
-                }
-                cout << "a  ";
                 div1.product(index);
-                for(j = 0; j < div1.number.size(); j++)
-                {
-                    cout <<div1.number[j];
-                }
-                cout << "b  ";
-                for(j = 0; j < index.number.size(); j++)
-                {
-                    cout <<index.number[j];
-                }
-                cout << "c  ";
                 charind2 = (i + 1) + 48;
-                cout << charind2 << "d   ";
                 index = charind2;
                 div2.product(index);
-                /*for(j = 0; j < dividendo.number.size(); j++)
-                {
-                    cout <<dividendo.number[j];
-                }*/
                 if((div1 < dividendo) & (div2 > dividendo))
                 {
                     ans.number.push_back(i);
@@ -402,22 +333,6 @@ void BigInteger::quotient(BigInteger& num)
         this->number.clear();
         this->number = ans.number;
     }  
-    if(this->sign)
-    {
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    else
-    {
-        cout << "-";
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    cout <<"\n"; 
 }
 
 void BigInteger::remainder(BigInteger& num)
@@ -453,30 +368,10 @@ void BigInteger::remainder(BigInteger& num)
                 div2 = num;
                 charind1 = i + 48;
                 index = charind1;
-                for(j = 0; j < div1.number.size(); j++)
-                {
-                    cout <<div1.number[j];
-                }
-                cout << "a  ";
                 div1.product(index);
-                for(j = 0; j < div1.number.size(); j++)
-                {
-                    cout <<div1.number[j];
-                }
-                cout << "b  ";
-                for(j = 0; j < index.number.size(); j++)
-                {
-                    cout <<index.number[j];
-                }
-                cout << "c  ";
                 charind2 = (i + 1) + 48;
-                cout << charind2 << "d   ";
                 index = charind2;
                 div2.product(index);
-                /*for(j = 0; j < dividendo.number.size(); j++)
-                {
-                    cout <<dividendo.number[j];
-                }*/
                 if((div1 < dividendo) & (div2 > dividendo))
                 {
                     dividendo.substract(div1);
@@ -493,22 +388,7 @@ void BigInteger::remainder(BigInteger& num)
         this->number.clear();
         this->number = ans.number;
     }  
-    if(this->sign)
-    {
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    else
-    {
-        cout << "-";
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    cout <<"\n"; 
+  
 }
 
 void BigInteger::pow(int& num)
@@ -558,21 +438,6 @@ void BigInteger::pow(int& num)
         num2.number = this->number;
         num3.quotient(num2);
         this->number = num3.number;
-    }
-    if(this->sign)
-    {
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
-    }
-    else
-    {
-        cout << "-";
-        for(i = 0; i < this->number.size(); i++)
-        {
-            cout << this->number[i];
-        }
     }
 }
 void BigInteger::operator+(BigInteger& num)
